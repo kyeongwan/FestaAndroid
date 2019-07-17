@@ -1,9 +1,7 @@
 package io.festa.app.di.name
 
-import java.lang.annotation.Retention
-import java.lang.annotation.RetentionPolicy
 import javax.inject.Qualifier
 
 @Qualifier
-@Retention(RetentionPolicy.RUNTIME)
+@kotlin.annotation.Retention(AnnotationRetention.RUNTIME)
 annotation class ActivityContext

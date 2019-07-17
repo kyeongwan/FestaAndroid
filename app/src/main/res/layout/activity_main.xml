@@ -23,4 +23,12 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
+    <Button
+            android:text="로그인 확인"
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

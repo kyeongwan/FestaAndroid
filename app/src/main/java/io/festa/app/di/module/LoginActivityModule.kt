@@ -6,18 +6,19 @@ import dagger.Binds
 import dagger.Module
 import io.festa.app.di.name.ActivityContext
 import io.festa.app.di.scope.ActivityScope
-import io.festa.app.presentation.MainActivity
+import io.festa.app.presentation.login.LoginActivity
 
 @Module
-abstract class MainActivityModule {
+abstract class LoginActivityModule {
 
     @Binds
     @ActivityScope
     @ActivityContext
-    internal abstract fun provideContext(activity: MainActivity): Context
+    internal abstract fun provideContext(activity: LoginActivity): Context
+
 
     @Binds
     @ActivityScope
-    internal abstract fun provideActivity(activity: MainActivity): Activity
+    internal abstract fun provideActivity(activity: LoginActivity): Activity
 
 }

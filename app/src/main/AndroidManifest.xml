@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:dist="http://schemas.android.com/apk/distribution"
-          package="io.festa.app">
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="io.festa.app">
 
-    <dist:module dist:instant="true"/>
+    <dist:module dist:instant="true" />
 
     <application
-            android:allowBackup="true"
-            android:icon="@drawable/festa_192"
-            android:label="@string/app_name"
-            android:name=".base.FestaApplication"
-            android:roundIcon="@drawable/festa_192"
-            android:supportsRtl="true"
-            android:theme="@style/AppTheme">
+        android:name=".base.FestaApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/festa_192"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/festa_192"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
         <activity android:name=".presentation.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <!-- 로그인 웹뷰 액티비티-->
+        <activity android:name=".presentation.login.LoginActivity" />
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
